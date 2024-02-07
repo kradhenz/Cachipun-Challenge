@@ -57,18 +57,25 @@ function toNumber(human) {
     } else if (human == 'Tijera' || human == 'tijera' || human == 'TIJERA') {
         return 3;
     } else {
-        return false;
+        return false; // false == 0, so it's necessary a random between 1 and 3
     }
 }
 
+/* START
+Request a number of time(s) to play to a human player */
 let num = prompt('Cuántas veces desea jugar?');
 for (let i = 0; i < num; i++) {
-    let human = prompt('¿Piedra, Papel o Tijera?')
+    // Request an option to a human player (and showing the game's number)
+    let human = prompt(`JUEGO Nro. ${i+1} \n¿Piedra, Papel o Tijera?`)
+    // Conditional statement to limit the options in the game
     if (toNumber(human) == false) {
         alert('¡LA OPCIÓN NO ES VÁLIDA!\n Las opciones válidas son:\n > Piedra, piedra, PIEDRA o \n > Papel, papel, PAPEL o \n > Tijera, tijera, TIJERA');
     } else {
+        // Generate a random between 1 and 3 to a machine player
         let random = Math.floor(Math.random() * 3) + 1;
+        // Show the versus players
         alert(`Tú: ${human} \nVS \nMáquina: ${toString(random)}`);
+        // Deliver result of game
         result(toNumber(human), random);
     }
 }
