@@ -65,10 +65,10 @@ let num = prompt('Cuántas veces desea jugar?');
 for (let i = 0; i < num; i++) {
     let human = prompt('¿Piedra, Papel o Tijera?')
     if (toNumber(human) == false) {
-        alert('¡LA OPCIÓN NO ES VÁLIDA!');
+        alert('¡LA OPCIÓN NO ES VÁLIDA!\n Las opciones válidas son:\n > Piedra, piedra, PIEDRA o \n > Papel, papel, PAPEL o \n > Tijera, tijera, TIJERA');
     } else {
         let random = Math.floor(Math.random() * 3) + 1;
-        alert(`Tú: ${human} VS Máquina: ${toString(random)}`);
+        alert(`Tú: ${human} \nVS \nMáquina: ${toString(random)}`);
         result(toNumber(human), random);
     }
 }
