@@ -1,3 +1,13 @@
+function toString(random) {
+    if (random == 1) {
+        return 'Piedra';
+    } else if (random == 2) {
+        return 'Papel';
+    } else {
+        return 'Tijera';
+    }
+}
+
 function toNumber(human) {
     if (human == 'Piedra' || human == 'piedra' || human == 'PIEDRA') {
         return 1;
