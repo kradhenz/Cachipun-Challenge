@@ -1,6 +1,6 @@
 // This function is called when human user win 'Cachipun'
 function win() {
-    return '¡FELICIDADES! HAS GANADO!'
+    return '¡FELICIDADES! HAS GANADO!';
 }
 
 // This function is called when human user lose 'Cachipun'
@@ -65,7 +65,7 @@ function toNumber(human) {
 Request a number of time(s) to play to a human player */
 let num;
 do {
-    num = +prompt('Cuántas veces desea jugar?');
+    num = +prompt('¿Cuántas veces desea jugar?');
     for (let i = 0; i < num; i++) {
         let human;
         do {
@@ -84,12 +84,12 @@ do {
             }
         } while (toNumber(human) == false);
     }
-    // Verify if 'num' variable is an Integer
+    // Verify if 'num' variable is a positive number
     if (Number.isInteger(num) == false || num < 0) {
-        alert(`El número o caracter ingresado no es válido. No se ha podido iniciar el juego.\nPor favor inténtelo nuevamente`);
+        alert('¡El número o caracter ingresado no es válido!\nNo se ha podido iniciar el juego. Por favor inténtelo nuevamente.');
     } else if (num == 0) {
-        alert('La máquina tampoco quería jugar.')
+        alert('La máquina tampoco quería jugar.');
     } else {
-        alert('EL JUEGO HA TERMINADO')
+        alert('EL JUEGO HA TERMINADO');
     }
 } while (Number.isInteger(num) == false || num < 0);
