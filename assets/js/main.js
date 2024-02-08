@@ -61,13 +61,15 @@ function toNumber(human) {
     }
 }
 
-/* START
-Request a number of time(s) to play to a human player */
+/* START */
 let num;
+// loop to verify right answers to correct workflow
 do {
+    // Request a number of time(s) to play to a human player
     num = +prompt('¿Cuántas veces desea jugar?');
     for (let i = 0; i < num; i++) {
         let human;
+        // loop to verify right answers to correct workflow
         do {
             // Request an option to a human player (and showing the game's number)
             human = prompt(`JUEGO Nro. ${i + 1} \n¿Piedra, Papel o Tijera?`)
